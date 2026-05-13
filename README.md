@@ -1,16 +1,44 @@
-# React + Vite
+# IELTS Writing Evaluator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered tool that gives instant, examiner-level feedback on IELTS Writing answers for both Task 1 and Task 2.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
+[Try it here](https://ielts-writing-tool.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What it does
+- Asks the user whether they are practising Task 1 or Task 2
+- For Task 1: provides an image upload box for graph/chart screenshots
+- Scores the answer across all 4 official IELTS criteria with a band score (1–9)
+- Gives specific, actionable improvement suggestions for each criterion
+- Generates a model answer at the student's target band (7, 7.5, 8, 8.5 or 9)
+- Dynamic word count tracker with minimum word targets per task type
 
-## React Compiler
+## Built with
+- React + Vite (frontend)
+- Node.js + Express (backend)
+- Groq API with Llama 3.3 70B (AI evaluation)
+- Deployed on Vercel (frontend) and Railway (backend)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Demo
+[Watch the demo](https://YOUR-YOUTUBE-LINK)
 
-## Expanding the ESLint configuration
+## How to run locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Frontend:**
+```bash
+cd ielts-writing-tool
+npm install
+npm run dev
+```
+
+**Backend:**
+```bash
+cd backend
+npm install
+node server.js
+```
+
+Add a `.env` file in the `backend` folder with:
+```
+GROQ_KEY=your-groq-api-key
+```

@@ -195,7 +195,7 @@ Provide your evaluation ONLY as a valid JSON object with this exact structure (n
 }`;
 
     try {
-      const res = await fetch("http://localhost:3001/api/evaluate", {
+      const res = await fetch("https://ielts-writing-tool-production.up.railway.app/api/evaluate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -226,7 +226,7 @@ ${question}
 Write ONLY the model answer. No preamble, no labels, no explanation.`;
 
     try {
-      const res = await fetch("http://localhost:3001/api/evaluate", {
+      const res = await fetch("https://ielts-writing-tool-production.up.railway.app/api/evaluate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
